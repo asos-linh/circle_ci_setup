@@ -1,10 +1,8 @@
 version: 2
 jobs:
   deployment:
-    prod:
-      branch: master
-      commands:
-        - aws s3 create testfolder
+      steps:
+        - run: aws s3 create testfolder
 
 workflows:
   version: 2
