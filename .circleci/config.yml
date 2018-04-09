@@ -1,5 +1,13 @@
-deployment:
-  prod:
-    branch: master
-    commands:
-      - aws s3 create testfolder
+version: 2
+jobs:
+  deployment:
+    prod:
+      branch: master
+      commands:
+        - aws s3 create testfolder
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - deployment
