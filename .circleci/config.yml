@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: mesosphere/aws-cli
     steps:
-      - run: aws s3 create testfolder
+      - run: aws s3 ls s3://pinglinh.com
 
 workflows:
   version: 2
